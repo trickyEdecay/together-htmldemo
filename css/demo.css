@@ -231,3 +231,45 @@
     
     border-radius: 50px;
 }
+
+
+.div-34-up{
+    padding:10px;
+}
+
+.div-34-profilecontainer{
+    display: block;
+    width:350px;
+    height:230px;
+    background-color: #eeeeff;
+    
+    border-radius: 10px;
+}
+
+.p-34-nickname{
+    font-weight: bold;
+    color:#000033;
+    margin-top: 10px;
+}
+
+.div-34-bottom{
+    background-color: #7766ee;
+    border-radius: 0 0 10px 10px;
+    padding: 10px;
+}
+
+.div-34-bottomdatacontainer{
+    display: block;
+    float: left;
+    width: 33%;
+}
+
+.div-34-data{
+    font-size: 30px;
+    color: #fff;
+}
+
+.div-34-dataname{
+    font-size: 14px;
+    color: #4433aa;
+}

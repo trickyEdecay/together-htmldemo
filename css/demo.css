@@ -1,0 +1,201 @@
+/*你会看见各个class名前面有一个点,要有这个点才是代表着class属性的,没有点的代表标签名*/
+
+.p-demo-1{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.span-bold{
+    font-weight: bold;
+}
+
+.span-i{
+    font-style:italic;
+}
+.span-u{
+    text-decoration: underline;
+}
+.span-big{
+    font-size:large;
+}
+.span-small{
+    font-size:small;
+}
+.span-overline{
+    text-decoration: overline;
+}
+.span-deleteline{
+    text-decoration:line-through;
+}
+
+.span-red{
+    color:#aa3333;
+}
+
+.span-green{
+    color:#33aa33;
+}
+
+.span-blue{
+    color:#3333aa;
+}
+
+.span-fontsize1{
+    font-size: 36px;
+}
+
+.span-fontsize2{
+    font-size: 24px;
+}
+
+.span-background{
+    background-color: #ffaaaa;
+}
+
+
+.span-fontfamily{
+    font-family: "宋体";
+}
+
+.p-text-left{
+    text-align: left;
+}
+
+.p-text-right{
+    text-align: right;
+}
+
+.p-text-center{
+    text-align: center;
+}
+
+
+.div-background-1{
+    background-color: cornflowerblue;
+}
+
+.div-background-2{
+    background-color: cadetblue;
+}
+
+
+.div-background-3{
+    background-color:brown;
+}
+
+.div-background-4{
+    background-color:coral;
+}
+
+.div-inline{
+    display: inline;
+}
+
+.div-block-1{
+    display: block;
+    width: 150px;
+    height:100px;
+}
+
+.div-inline-1{
+    display: inline-block;
+    width: 150px;
+    height:100px;
+}
+
+.div-block-2{
+    display: block;
+    width: 100px;
+    height:200px;
+}
+
+.div-block-1-1{
+    display: block;
+    float:left;
+    width: 150px;
+    height:100px;
+}
+
+.div-block-2-1{
+    display: block;
+    float:left;
+    width: 100px;
+    height:200px;
+}
+
+.div-block-nav{
+    display: block;
+    float:left;
+    width: 100px;
+    height:20px;
+}
+
+
+.a-button-baidu{
+    display: inline;
+    
+    margin: 5px;
+    border:0;
+    padding: 5px 8px; /*padding: 5px 8px 5px 8px;的简写,分别代表着上右下左的内边距*/
+    background-color: #4477ff;
+    color:#fff;
+    border-radius: 5px; /*使矩形变成圆角矩形*/
+    text-decoration: none; /*去掉链接的下划线*/
+}
+
+.a-button-baidu:hover, /*当鼠标或者焦点停留在这个东西上的时候触发*/
+.a-button-baidu:focus{
+    background-color: #4499ff;
+}
+
+.a-button-baidu:active{ /*当鼠标点击之后触发*/
+    background-color: #4477aa;
+}
+
+.div-margin-left{
+    margin-left: 50px; /*等效于 margin: 0 0 0 50px;*/
+}
+
+.div-padding-left{
+    padding-left: 50px; /*等效于 margin: 0 0 0 50px;*/
+}
+
+
+.div-block-3{
+    display: block;
+    width: 300px;
+    height:300px;
+}
+
+.div-29-left{
+    display: block;
+    float: left;
+    width:50%;
+    height:200px;
+}
+
+.div-29-right{
+    display: block;
+    float: left;
+    width:50%;
+    height:200px;
+}
+
+.div-30-leftup{
+    height: 40%;
+}
+.div-30-leftdown{
+    height: 60%;
+}
+.div-31-left{
+    display: block;
+    float: left;
+    width:50%;
+    height:100%;
+}
+.div-31-right{
+    display: block;
+    float: left;
+    width:50%;
+    height:100%;
+}

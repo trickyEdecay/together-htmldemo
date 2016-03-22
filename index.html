@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>demo</title>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/demo.css" rel="stylesheet">
+  </head>
+  <body>
+    <center>
+        <div class="div-main-container">
+            <h1>好多好多demo</h1>
+            <hr>
+            
+            
+            <h3>1. 两个&nbsp;<code>&lt;a&gt;</code></h3>
+            <div class="div-demo-container">
+                <a>这是第一个</a>
+                <a>这是第二个</a>
+            </div>
+            
+            <br>
+            <h3>2. 两个&nbsp;<code>&lt;a&gt;</code></h3>
+            <div class="div-demo-container">
+                <a>这是第一个</a><a>这是第二个</a>
+            </div>
+            
+            <div class="div-demo-tips">
+                观察以上两个白框内的源代码,可以发现,即使第一个例子中的代码中的两个a标签之间存在换行,但实际上在网页中并没有换行,说明html代码中换行与不换行不会影响到实际中换行或者不换行.
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <h3>3. 两个&nbsp;<code>&lt;p&gt;</code></h3>
+            <div class="div-demo-container">
+                <p>这是第一个</p>
+                <p>这是第二个</p>
+            </div>
+            
+            <br>
+            <h3>4. 两个&nbsp;<code>&lt;p&gt;</code></h3>
+            <div class="div-demo-container">
+                <p>这是第一个</p><p>这是第二个</p>
+            </div>
+            
+            <div class="div-demo-tips">
+                观察3和4,发现两个p标签无论怎样,p标签都是独占一行的.
+            </div>
+            
+            <div class="div-demo-tips">
+                从1和2,3和4中可以得出一个结论,a标签和p标签在外观上几乎没有差别,只是p标签独占一行,而a标签不独占一行.在html中,有一些标签是会独占一行的,而有一些标签是不会独占一行的,还有一些标签是两者皆有的.这些会独占一行的标签我们叫做<strong>块级元素</strong>,不会独占一行的标签叫做<strong>行内元素</strong>.
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>5. 一首诗</h3>
+            <div class="div-demo-container">
+                <span>锄禾日当午,</span><br>
+                <span>汗滴禾下土.</span><br>
+                <a>谁知盘中餐,</a><br>
+                <a>粒粒皆辛苦.</a>
+            </div>
+            
+            <div class="div-demo-tips">
+                上述demo中使用了两种行内标签: <code>&lt;span&gt;</code> 和 <code>&lt;a&gt;</code> , 他们通过<code>&lt;br&gt;</code>标签来换行.
+            </div>
+            <div class="div-demo-tips">
+                html中有很多标签写完之后在浏览器看起来的效果一模一样,就像上述的a和span一样,那为什么要设置这么多标签呢? 原因是使用正确的标签会使得你的代码看起来很容易阅读.a标签一般是用在链接的文字上,而span一般是用在修饰一些文字上.换句话说,html的大部分标签还有一定的使用语境.就像你不能在葬礼上使用"哈哈哈"标签一样,而应该使用"呜呜呜".当然你也要用"哈哈哈"也没人拦着你,只是回过头来看,会觉得这一切很荒唐~
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>6. 两个链接</h3>
+            <div class="div-demo-container">
+                <a href="http://www.baidu.com">点击此处前往百度</a>
+                <br>
+                <a href="http://www.baidu.com" target="_blank">点击此处前往百度</a>
+            </div>
+            
+            <div class="div-demo-tips">
+                <code>&lt;a&gt;</code> 标签中的 <strong>target</strong> 属性设置为 "_blank" 的时候,会在新的窗口打开网页.
+            </div>
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>7. 感受一下<code>&lt;a&gt;</code>+<code>&lt;br&gt;</code>和<code>&lt;p&gt;</code></h3>
+            <div class="div-demo-container">
+                <a>这是一个a标签</a><br>
+                <a>这是一个a标签</a>
+                <p>这是一个p标签</p>
+                <p>这是一个p标签</p>
+            </div>
+            
+            <div class="div-demo-tips">
+                明显的差异在于两行之间的行距不一样,但这么描述其实是有问题的,真正不一样的地方是他们的边距(margin)不一样,margin是一个css属性.margin只对<strong>块级元素</strong>起作用.
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>8.强行更改 <code>&lt;p&gt;</code> 的margin属性 </h3>
+            <div class="div-demo-container">
+                <p>这个p标签带有默认的margin</p>
+                <p>这个p标签带有默认的margin</p>
+                <p style="margin-top:40px;margin-bottom:40px">这个p标签通过标签内属性的形式修改了margin</p>
+                <p style="margin-top:40px;margin-bottom:40px">这个p标签通过标签内属性的形式修改了margin</p>
+                <p class="p-demo-1">这个p标签通过css文件修改了margin(强烈推荐)</p>
+                <p class="p-demo-1">这个p标签通过css文件修改了margin(强烈推荐)</p>
+            </div>
+            
+            <div class="div-demo-tips">
+                后面4个p标签的margin值设置是一样的,一般地,可以通过在浏览器 右键->审查元素 的方式对某一个标签进行检查.后两个p标签定义了一个class属性,可以在demo.css这个文件中找到它~
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>9.在<code>&lt;p&gt;</code>中嵌套<code>&lt;a&gt;</code></h3>
+            <div class="div-demo-container">
+                <p>这是一段文字.文字中竟然带有一个链接<a href="http://www.baidu.com" target="_blank">百度</a></p>
+            </div>
+            
+            <div class="div-demo-tips">
+                也就是说,块级元素里面可以嵌套行内元素.
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>10.在<code>&lt;p&gt;</code>中嵌套<code>&lt;p&gt;</code></h3>
+            <div class="div-demo-container">
+                <p>这是一段<p>完整的</p>文字.</p>
+            </div>
+            
+            <div class="div-demo-tips">
+                嗯,块级元素不能嵌套块级元素,和我预想中的结果不一样.
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>11.在<code>&lt;a&gt;</code>中嵌套<code>&lt;p&gt;</code></h3>
+            <div class="div-demo-container">
+                <a href="http://www.baidu.com" target="_blank">这是一段<p>完整的</p>文字.</a>
+            </div>
+            
+            <div class="div-demo-tips">
+                嗯,行内元素不能嵌套块级元素,而且发现第二行后面空白的部分也可以点呢~
+            </div>
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>12.众多的修饰标签</h3>
+            <div class="div-demo-container">
+                <p>这是一行字</p>
+                <p>这里有<strong>加粗的文字</strong></p>
+                <p>这里有<b>加粗的文字</b></p>
+                <p>这里有<i>斜体文字</i></p>
+                <p>这里有<em>斜体文字</em></p>
+                <p>这里有<u>下划线文字</u></p>
+                <p>这里有<big>大号字体</big></p>
+                <p>这里有<small>小号字体</small></p>
+            </div>
+            
+            <div class="div-demo-tips">
+                html中提供了很多很方便的标签用来修饰文字
+            </div>
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>12.利用css来模仿上面的效果</h3>
+            <div class="div-demo-container">
+                <p>这是一行字</p>
+                <p>这里有<span class="span-bold">加粗的文字</span></p>
+                <p>这里有<span class="span-i">斜体文字</span></p>
+                <p>这里有<span class="span-u">下划线文字</span></p>
+                <p>这里有<span class="span-big">大号字体</span></p>
+                <p>这里有<span class="span-small">小号字体</span></p>
+            </div>
+            
+            <div class="div-demo-tips">
+                css中有一整套完整的方案可以设置字体的样式什么的.
+            </div>
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>13.更多样式</h3>
+            <div class="div-demo-container">
+                <p>这是一行字</p>
+                <p>这里有<span class="span-overline">线在上面的文字</span></p>
+                <p>这里有<span class="span-deleteline">删除线文字</span></p>
+                <p>这里有<span class="span-red">红色字体</span></p>
+                <p>这里有<span class="span-green">绿色字体</span></p>
+                <p>这里有<span class="span-blue">蓝色字体</span></p>
+                <p>这里有<span class="span-red">红</span><span class="span-green">绿</span><span class="span-blue">蓝</span>三种颜色呢</p>
+                <p>这里有<span class="span-fontsize1">字号为36的字体</span></p>
+                <p>这里有<span class="span-fontsize2">字号为24的字体</span></p>
+                <p>这里有<span class="span-fontfamily">宋体文字</span></p>
+                <p>这里有<span class="span-background">有背景色的文字</span></p>
+                <p>这里有<span class="span-overline span-red span-fontsize1 span-fontfamily">线在上面的字号为36的红色宋体文字</span></p>
+            </div>
+            
+            <div class="div-demo-tips">
+                通过css可以对文字进行很多的调整.当然,设置字体的话,只会显示你电脑上有的字体.电脑上没安装这个字体就显示不出来.
+            </div>
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>14.左对齐?右对齐?居中对齐?</h3>
+            <div class="div-demo-container">
+                <p class="p-text-left">这是一行字</p>
+                <p class="p-text-right">这是一行字</p>
+                <p class="p-text-center">这是一行字</p>
+            </div>
+            
+            <div class="div-demo-tips">
+                <b>text-align</b>属性只能够用在<b>块级元素</b>上,之后里面的所有东西都会根据设置对齐.
+            </div>
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>15.<code>&lt;div&gt;</code>标签</h3>
+            <div class="div-demo-container">
+                <div></div>
+                <div>这里有一行字</div>
+            </div>
+            
+            <div class="div-demo-tips">
+                上面有两对div标签,第一对内容是空的,因此没有显示东西,只有第二行才显示了东西.<code>&lt;div&gt;</code>标签经常用来当做其他标签的容器.
+            </div>
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>16.两个<code>&lt;div&gt;</code>标签</h3>
+            <div class="div-demo-container">
+                <div>这里有一行字</div>
+                <div>这里有一行字</div>
+            </div>
+            
+            <div class="div-demo-tips">
+                由此可见,div标签默认是<b>块级元素</b>
+            </div>
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>17.两个<code>&lt;div&gt;</code>标签</h3>
+            <div class="div-demo-container">
+                <div class="div-inline">这里有一行字</div>
+                <div class="div-inline">这里有一行字</div>
+            </div>
+            
+            <div class="div-demo-tips">
+                通过css的<b>display</b>属性,可以将元素设置为<b>行内元素(inline)</b>或<b>块级元素(block)</b>
+            </div>
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>18.为了方便观察,我将两个<code>&lt;div&gt;</code>标签染色</h3>
+            <div class="div-demo-container">
+                <div class="div-background-1 div-inline">这里有一行字</div><div class="div-background-2 div-inline">这里有一行字</div>
+                
+                <br>
+                <br>
+                
+                <div class="div-background-1 div-inline">这里有一行字</div>
+                <div class="div-background-2 div-inline">这里有一行字</div>
+            </div>
+            
+            <div class="div-demo-tips">
+                本来上面这两种写法的最终效果都一样的,可是html中好像没有规定浏览器该怎么处理..就出现了这样的误差,慎重呀!
+            </div>
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>19.块级元素div与其长宽设置</h3>
+            <div class="div-demo-container">
+                <div class="div-background-1 div-block-1">这里有一行字</div><div class="div-background-2 div-block-2">这里有一行字</div>
+            </div>
+            
+            <div class="div-demo-tips">
+                记住哦!块级元素无论设置多长..反正他就是独占一行.<b>width和height(宽度和高度)</b>两个属性只对<b>块级元素</b>起作用
+            </div>
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>20.设置块级元素div浮动</h3>
+            <div class="div-demo-container">
+                <div class="div-background-1 div-block-1-1">这里有一行字</div><div class="div-background-2 div-block-2-1">这里有一行字</div>
+                <br style="clear:both">
+            </div>
+            
+            <div class="div-demo-tips">
+                记住哦!块级元素无论设置多长..反正他就是独占一行.<b>width和height(宽度和高度)</b>两个属性只对<b>块级元素</b>起作用
+            </div>
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>21.利用&nbsp;块级元素div浮动实现一个导航栏</h3>
+            <div class="div-demo-container">
+                <div class="div-background-1 div-block-nav">首页</div>
+                <div class="div-background-2 div-block-nav">说说</div>
+                <div class="div-background-1 div-block-nav">相册</div>
+                <div class="div-background-2 div-block-nav">日志</div>
+                <div class="div-background-1 div-block-nav">关于我</div>
+                <br style="clear:both">
+            </div>
+            
+            <div class="div-demo-tips">
+                多个demo20中的方块放在一起看起来就像导航栏啦~
+            </div>
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>22.用css美观一个按钮/链接</h3>
+            <div class="div-demo-container">
+                <a href="http://www.baidu.com" target="_blank">百度一下(没有经过装饰)</a>
+                <br><br>
+                <a href="http://www.baidu.com" target="_blank" class="a-button-baidu">百度一下</a>
+                <br>
+                <br>
+                <div class="a-button-baidu">这是一个div做成的按钮</div>
+                <br>
+                <br>
+                <button class="a-button-baidu">这是button标签</button>
+            </div>
+            
+            <div class="div-demo-tips">
+                上面使用三种标签加上同一个css的类做成基本相同的按钮,至于以后要使用哪种形式的按钮~随你~开心就好~
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>23.美化demo21中的导航栏</h3>
+            <div class="div-demo-container">
+                <div class="div-background-1 div-block-nav a-button-baidu">首页</div>
+                <div class="div-background-2 div-block-nav a-button-baidu">说说</div>
+                <div class="div-background-1 div-block-nav a-button-baidu">相册</div>
+                <div class="div-background-2 div-block-nav a-button-baidu">日志</div>
+                <div class="div-background-1 div-block-nav a-button-baidu">关于我</div>
+                <br style="clear:both">
+            </div>
+            
+            <div class="div-demo-tips">
+                多个demo20中的方块放在一起看起来就像导航栏啦~
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>24.设置了margin-left属性的两个float的div</h3>
+            <div class="div-demo-container">
+                <p>这是没设置的样子:</p>
+                <div class="div-background-1 div-block-1-1">这是第一个</div>
+                <div class="div-background-2 div-block-2-1">这是第二个</div>
+                <br style="clear:both">
+                <p>这是设置了margin-left:50px 的样子:</p>
+                <div class="div-background-1 div-block-1-1 div-margin-left">这是第一个</div>
+                <div class="div-background-2 div-block-2-1 div-margin-left">这是第二个</div>
+                <br style="clear:both">
+            </div>
+            
+            <div class="div-demo-tips">
+                margin会使得元素留下一些<b>外边距</b>
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>24.设置了padding-left属性的两个float的div</h3>
+            <div class="div-demo-container">
+                <p>这是没设置的样子:</p>
+                <div class="div-background-1 div-block-1-1">这是第一个</div>
+                <div class="div-background-2 div-block-2-1">这是第二个</div>
+                <br style="clear:both">
+                <p>这是设置了padding-left:50px 的样子:</p>
+                <div class="div-background-1 div-block-1-1 div-padding-left">这是第一个</div>
+                <div class="div-background-2 div-block-2-1 div-padding-left">这是第二个</div>
+                <br style="clear:both">
+            </div>
+            
+            <div class="div-demo-tips">
+                padding会使得元素留下一些<b>内边距</b>
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>25. div嵌套div</h3>
+            <div class="div-demo-container">
+                <div class="div-background-1 div-block-3">
+                    <div class="div-background-2 div-block-1"></div>
+                </div>
+                
+            </div>
+            
+            <div class="div-demo-tips">
+                div经常拿来各种嵌套
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>26. div嵌套div,并为外层div(父div)设置padding-left</h3>
+            <div class="div-demo-container">
+                <div class="div-background-1 div-block-3 div-padding-left">
+                    <div class="div-background-2 div-block-1"></div>
+                </div>
+            </div>
+            
+            <div class="div-demo-tips">
+                padding实质是设置某个东西内部元素与这个东西本身的间距
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>27. div嵌套div,并为内层div(子div)设置margin-left</h3>
+            <div class="div-demo-container">
+                <div class="div-background-1 div-block-3">
+                    <div class="div-background-2 div-block-1 div-margin-left"></div>
+                </div>
+                <p>如果外层也加上margin-left:</p>
+                <div class="div-background-1 div-block-3 div-margin-left">
+                    <div class="div-background-2 div-block-1 div-margin-left"></div>
+                </div>
+            </div>
+            
+            <div class="div-demo-tips">
+                margin实质是设置某个东西的边界与其他外部元素之间的间距
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>28. div嵌套div,左对齐?右对齐?居中对齐?</h3>
+            <div class="div-demo-container">
+                <p>左对齐:</p>
+                <div class="div-background-1 div-block-3 p-text-left">
+                    <div class="div-background-2 div-inline-1"></div>
+                </div>
+                <p>右对齐:</p>
+                <div class="div-background-1 div-block-3 p-text-right">
+                    <div class="div-background-2 div-inline-1"></div>
+                </div>
+                <p>居中对齐:</p>
+                <div class="div-background-1 div-block-3 p-text-center">
+                    <div class="div-background-2 div-inline-1"></div>
+                </div>
+            </div>
+            
+            <div class="div-demo-tips">
+                使用<b>text-align</b>属性可以使得某一个元素以内的所有元素按照设置来进行对齐.内部元素必须为<b>行内元素</b>!!
+                <br>
+                就在刚才做测试的时候,我突然发现因为 inline元素不能够设置width和height,所以必须要设置成inline-block(行内块)元素才能设置长宽.才能显示出来给大家看到~
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>29. 将网页分成两半!</h3>
+            <div class="div-demo-container">
+                <div class="div-background-1 div-29-left"></div>
+                <div class="div-background-2 div-29-right"></div>
+                <br style="clear:both">
+            </div>
+            
+            <div class="div-demo-tips">
+                width的值可以设置为百分比,以此类推可以将网页分成很多半呢~
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>30. 将网页分成两半!再将左边分成上下两部分</h3>
+            <div class="div-demo-container">
+                <div class="div-background-1 div-29-left">
+                    <div class="div-background-3 div-30-leftup"></div>
+                    <div class="div-background-4 div-30-leftdown"></div>
+                </div>
+                <div class="div-background-2 div-29-right"></div>
+                <br style="clear:both">
+            </div>
+            
+            <div class="div-demo-tips">
+                width的值可以设置为百分比,以此类推可以将网页分成很多半呢~
+            </div>
+            
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            
+            <br>
+            <h3>31. 将网页分成两半!再将左边分成上下两部分!再将左边的下半部分搞成左右两部分!</h3>
+            <div class="div-demo-container">
+                <div class="div-background-1 div-29-left">
+                    <div class="div-background-3 div-30-leftup"></div>
+                    <div class="div-background-4 div-30-leftdown">
+                        <div class="div-background-2 div-31-left"></div>
+                        <div class="div-background-1 div-31-right"></div>
+                    </div>
+                </div>
+                <div class="div-background-2 div-29-right"></div>
+                <br style="clear:both">
+            </div>
+            
+            <div class="div-demo-tips">
+                width的值可以设置为百分比,以此类推可以将网页分成很多半呢~
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+    </center>
+  </body>
+</html>

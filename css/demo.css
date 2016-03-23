@@ -273,3 +273,36 @@
     font-size: 14px;
     color: #4433aa;
 }
+
+
+.div-35-container{
+    display: block; /*设置为块级元素*/
+    background-color: #eee; /*设置背景色*/
+    
+    text-align: center; /*设置居中*/
+    
+    width:200px; /*设置长宽*/
+    height:220px;
+    
+    
+    border-radius: 10px; /*设置矩形边角半径*/
+}
+
+.img-35-ganlan{
+    width:180px;
+    
+    margin-top: 10px;/*使其距离父元素的上边界有10个像素*/
+}
+
+.a-35-buy{
+    display: inline-block; /*必须设置成行内块元素,要不然他不会居中....*/
+    
+    margin-top: 20px;
+    padding: 10px; /*留一些内边距*/
+    width: 80px; /*设置他的宽度*/
+    
+    
+    background-color: #ff6633; /*背景颜色改成淘宝的橙色!*/
+    color: #fff; /*字体颜色就用白色吧!*/
+    border-radius: 10px; /*边界半径也设置一下吧~*/
+}
